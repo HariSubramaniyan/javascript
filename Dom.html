@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    DOM 
+</head>
+<body>
+    <button>hello</button>
+    <button class="js-buuton">second</button>
+    <script>
+        //document object model
+        //document.body.innerHTML = 'Pay the pending payments'
+
+        console.log(document.title);
+        document.title = 'changed';
+        console.log(document.body); // --> it gives inner give body
+
+        console.log(document.body.innerHTML) //--> it give inner body html
+        
+      console.log(document.querySelector('button'));
+      document.querySelector('button') .innerHTML = 'changed';
+      const buttonEle =   document.querySelector('.js-button').innerHTML = 'secondChanges';
+    </script>
+</body>
+</html>

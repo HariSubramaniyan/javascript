@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title></title>
+</head>
+<body>
+    <button class="js-button">click</button>
+    <script>
+        ['hari','Ammu','Nisha','Asvika'].forEach((val)=>{
+            console.log(val);
+
+        });
+
+
+        const arrowfun = () => {
+            console.log();
+        };
+        const EventListener = ()=>{
+            console.log('click');
+        }
+        const Elem = document.querySelector('.js-button');
+        Elem.addEventListener('click',EventListener);
+
+        elem.addEventListener('click',() => {
+                console.log('Click2');
+        });
+
+        Elem.removeEventListener('click',EventListener);
+
+        [1,-2,3].filter((value,index) => {
+            return value >= 0; 
+        });
+
+
+
+    </script>
+    
+</body>
+</html>
