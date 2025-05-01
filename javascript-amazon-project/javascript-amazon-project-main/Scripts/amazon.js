@@ -25,7 +25,6 @@
 //     },
 //     price:400
 // }]; 
-import '../data/Cart';
 
 let productHtml = '';
 products.forEach((product) =>{
@@ -108,7 +107,18 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) =>{
            });
         
        }
+      console.log(cart);
+       let cartquantity = 0;
+
+       cart.forEach((item) => {
+        cartquantity += item.quantity;
+
+       });
+
+       document.querySelector('.js-cart-quantity')
+          .innerHTML = cartquantity;
     });
 
 });
+
 
