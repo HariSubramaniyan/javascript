@@ -25,6 +25,7 @@
 //     },
 //     price:400
 // }]; 
+import {cart} from '../data/Cart.js'
 
 let productHtml = '';
 products.forEach((product) =>{
