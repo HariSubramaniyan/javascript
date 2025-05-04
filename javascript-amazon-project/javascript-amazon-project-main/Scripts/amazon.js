@@ -27,6 +27,7 @@
 // }]; 
 import {cart ,addToCart} from '../data/Cart.js'
 import { products } from '../data/products.js';
+import { formatCurrency } from './utils/money.js';
 
 let productHtml = '';
 products.forEach((product) =>{
