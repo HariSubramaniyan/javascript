@@ -3,13 +3,259 @@
     <head>
         <style>
             .thumbnail{
-                width: 300px;
+                width: 100%;
+            }
+            p{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
             
+            .chennal-picture{
+                display: inline-block;
+                width: 50px;
+                vertical-align: top;
+            }
+            .video-info{
+                display: inline-block;
+                width: 200px;
+            }
+            .profile-pic{
+                width: 45px;
+                border-radius: 50px;
+            }
+            .video-title{
+                margin-top: 0;
+                margin-bottom: 12px;
+            }
+            .thumbnail-row{
+                margin-bottom: 12px;
+            }
+            .video-author, .video-stats{
+                font-size: 12px;
+                color: rgb(96,96 green,96 blue);
 
+            }
+            .video-grid{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 16px;
+                row-gap: 40px; ;
+            }
+            .video-title{
+                margin-top: 0;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                margin-bottom: 12px;
+            }
+            body{
+                margin: 0;
+            }
+            .header{
+                height: 55px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            .left-section{
+                display: flex;
+                align-items: center;
+            }
+            .middle-section{
+                background-color: lightpink;
+                flex:1;
+                max-width: 400px;
+                display: flex;
+                align-items: center;
+                
+            }
+            .right-section{
+                background-color: lightblue;
+                width: 200px;
+            }
+           .hamburger-menu{
+            height: 20px;
+            margin-left: 24px;
+            margin-right: 20px;
+           }
+           .youtube-logo{
+            height: 20px;
+           }
+           .search-button{
+            height: 40px;
+            width: 60px;
+            background-color: rgb(240,240,240);
+            border-radius: 1px;
+            border-style: solid;
+            border-color: rgb(192,192,192);
+            margin-left: -1px;
+            margin-right: 10px;
+
+           }
+           .voice-search-button{
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+            border:none
+           }
+           .search-bar{
+            flex: 1;
+            height: 36px;
+            padding-left: 10px;
+            font-size: 16px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: gray;
+            border-radius: 2px;
+            box-shadow: inset 1px 2px 3px rgba(0,0 green,0,0.5);
+        
+
+           }
+           .search-bar::placeholder{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+
+           }
+           .search-icon{
+            height: 30px;
+            margin-top: 4px;
+            }
+            .header{
+                height: 55px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: white;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+                border-bottom-color: gray;
             }
         </style>
     </head>
     <body>
-        <img src="./img/thumbnail-1.webp">
+    <div class="header">
+    <div class="left-section">
+        <img class="hamburger-menu" src="./img/icons/hamburger-menu.svg">
+        <img class="youtube-logo" src="./img/icons/youtube-logo.svg">
+    </div>
+    <div class="middle-section">
+            <input class="search-bar" type="text" placeholder="search">
+            <button class="search-button"><img class="search-icon" src="./img/icons/search.svg"></button>
+            <button class="voice-search-button"><img src="./img/icons/voice-search-icon.svg"></button>
+    </div>
+    <div class="right-section">
+        div2
+
+    </div>
+
+    </div>
+    <div></div>
+        <div class="video-grid">
+        <div class ="video-preview">
+                <div class = "thumbnail-row">
+                    <img class="thumbnail" src="./img/thumbnail-1.webp">
+                </div>
+                <div>
+                    <div class="chennal-picture"><img class="profile-pic" src="./img/channel-1.jpeg">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title" >
+                            Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                            
+                        <p class="video-author"> Marques Brownlee</p>
+                            
+                        <p class="video-stats"> 3.4M views · 6 months ago</p>
+                    
+                    </div>
+                    
+                    
+                </div>
+                
+        </div>
+        <div class ="video-preview">
+            <div><img class="thumbnail" src="./img/thumbnail-2.webp"></div>
+            <div>
+            <div class="chennal-picture"><img class="profile-pic" src="./img/channel-2.jpeg"></div>
+            <div class="video-info">
+                <p class="video-title">Try Not To Laugh Challenge #9</p> 
+                 <p class="video-author">Markiplier</p>
+                <p class="video-stats"> 1.9M views · 6 months ago</p>
+
+            </div>
+            </div>
+        </div>
+        <div class ="video-preview">
+            <div class = "thumbnail-row">
+                <img class="thumbnail" src="./img/thumbnail-3.webp">
+            </div>
+            <div>
+                <div class="chennal-picture"><img class="profile-pic" src="./img/channel-3.jpeg">
+                </div>
+                <div class="video-info">
+                    <p class="video-title" >
+                        Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                        
+                    <p class="video-author"> Marques Brownlee</p>
+                        
+                    <p class="video-stats"> 3.4M views · 6 months ago</p>
+                
+                </div>
+                
+                
+            </div>
+            
+    </div>
+    <div class ="video-preview">
+        <div><img class="thumbnail" src="./img/thumbnail-4.webp"></div>
+        <div>
+        <div class="chennal-picture"><img class="profile-pic" src="./img/channel-4.jpeg"></div>
+        <div class="video-info">
+            <p class="video-title">Try Not To Laugh Challenge #9</p> 
+             <p class="video-author">Markiplier</p>
+            <p class="video-stats"> 1.9M views · 6 months ago</p>
+
+        </div>
+        </div>
+    </div>
+    <div class ="video-preview">
+        <div class = "thumbnail-row">
+            <img class="thumbnail" src="./img/thumbnail-5.webp">
+        </div>
+        <div>
+            <div class="chennal-picture"><img class="profile-pic" src="./img/channel-5.jpeg">
+            </div>
+            <div class="video-info">
+                <p class="video-title" >
+                    Talking Tech and AI with Google CEO Sundar Pichai!</p>
+                    
+                <p class="video-author"> Marques Brownlee</p>
+                    
+                <p class="video-stats"> 3.4M views · 6 months ago</p>
+            
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    <div class ="video-preview">
+    <div><img class="thumbnail" src="./img/thumbnail-9.webp"></div>
+    <div>
+    <div class="chennal-picture"><img class="profile-pic" src="./img/channel-9.jpeg"></div>
+    <div class="video-info">
+        <p class="video-title">Try Not To Laugh Challenge #9</p> 
+         <p class="video-author">Markiplier</p>
+        <p class="video-stats"> 1.9M views · 6 months ago</p>
+
+    </div>
+    </div>
+    </div>
+</div>
+            
+        
     </body>
 </html>
