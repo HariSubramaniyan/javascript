@@ -1,4 +1,48 @@
-export const products = [
+import { formatCurrency } from "../Scripts/utils/money.js";
+
+
+class Product{
+  id;
+  image;
+  name;
+  rating;
+  priceCents;
+  constructor(productsDeatils){
+    this.id = productsDeatils.id;
+    this.image = productsDeatils.image;
+    this.name = productsDeatils. name;
+    this.rating = productsDeatils.rating;
+    this.priceCents = productsDeatils.priceCents;
+
+  }
+  getStarsUrl(){
+    return `images/ratings/rating-${this.rating.stars * 10}.png`;
+  }
+  getPrice(){
+    return `$${formatCurrency(this.priceCents)}`;
+  }
+  extraInfoHTML(){
+    return '';
+  }
+}
+
+class Clothing extends Product {
+  sizeChartLink;
+
+  constructor(productsDeatils){
+    super(productsDeatils);
+    this.sizeChartLink = productsDeatils.sizeChartLink;
+  }
+  extraInfoHTML() {
+    return  `
+    <a href = "${this.sizeChartLink}" target ="_blank">
+    Size chart</a>
+    `;
+  }
+
+}
+
+ export const products = [
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/products/athletic-cotton-socks-6-pairs.jpg",
@@ -657,4 +701,10 @@ export const products = [
       "mens"
     ]
   }
-];
+].map((productsDeatils) =>{
+  if(productsDeatils.type === 'clothing') {
+    return new Clothing(productsDeatils);
+  }
+  return new Product(productsDeatils);
+
+});
